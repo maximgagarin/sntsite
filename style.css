@@ -1,0 +1,21 @@
+
+/* Для показа выпадающего меню при наведении */
+#navbarDropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.head{
+
+    height: 100px;
+    background-image: url("Amazing3.jpg") ;
+    background-position: top left;
+
+}
+
+#news{
+    border-bottom: darkgray solid 1px;
+}
+
+.nav-item:hover .nav-link {
+    text-decoration: underline;
+}
