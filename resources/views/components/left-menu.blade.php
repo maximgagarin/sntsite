@@ -14,4 +14,7 @@
     <li class="nav-item bg-success">
         <a class="nav-link text-white" href="#">Реквизиты</a>
     </li>
+    <li class="nav-item bg-success">
+        <a class="nav-link text-white" href="{{route('admin')}}">Админ</a>
+    </li>
 </ul>

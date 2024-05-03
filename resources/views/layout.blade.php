@@ -14,7 +14,7 @@
 <div class="container">
     <div class="row justify-content-between head">
         <div class="col-4">
-       git
+            <h2 class="mt-3"  style=" margin: 0 ">СНТ "ЗАРЯ-2"</h2>
             <p  style=" margin-top: 0 ">садоводческое некоммерческое товарищество</p>
         </div>
         <div class="col-4">
