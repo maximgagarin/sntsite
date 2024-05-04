@@ -19,3 +19,12 @@
 .nav-item:hover .nav-link {
     text-decoration: underline;
 }
+
+.footer{
+    height: 200px;
+}
+
+#footer_img{
+    width: 100%;
+    opacity: 0.7;
+}
