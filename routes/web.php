@@ -20,17 +20,32 @@ Route::get('/news', function () {
     return view('news');
 })->name('news');
 
+Route::get('/contacts', function () {
+    return view('contacts');
+})->name('contacts');
+
+
+
 Route::get('/works', function () {
     return view('works');
 })->name('works');
 
-Route::get('/admin', 'AdminController@index')->name('admin');
 
+Route::middleware(['admin'])->group(function () {
+Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+});
+
+
+//Route::get('/admin2', [App\Http\Controllers\HomeController::class, 'index'])->name('main');
+
+
+Route::get('/admin3', [App\Http\Controllers\HomeController::class, 'index'])->name('registr');
 Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('main');
+
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\AdminController::class, 'index'])->name('admin');
+Route::get('/homeadmin', [App\Http\Controllers\AdminController::class, 'index'])->name('homeadmin');
 
 Route::get('/post/add', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');

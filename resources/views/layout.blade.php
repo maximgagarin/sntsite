@@ -8,10 +8,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/style.css">
+
     <title>Document</title>
 </head>
-<body>
+<body class="body">
+
 <div class="container">
+
     <div class="row justify-content-between head bg-success ">
         <div class="col-5 mt-2">
             <div class="row">
@@ -19,7 +22,7 @@
               <img src="{{ asset('images/logo5.jpg') }}" alt="">
           </div>
             <div class="col-6">
-                <h2    style=" margin: 0; color: white "><span class="text-warning">СНТ</span> "ЗАРЯ-2"</h2>
+                <h2  style=" margin: 0; color: white "><span class="text-warning">СНТ</span> "ЗАРЯ-2"</h2>
                 <p  style=" margin-top: 0; font-size: 12px; color: white ">садоводческое некоммерческое товарищество</p>
             </div>
             </div>
@@ -87,7 +90,7 @@
                                 Документы
                             </a>
                             <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="{{ asset('docs/Устав.pdf') }}">Устав</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
                             </ul>
@@ -95,14 +98,10 @@
                     </ul>
                     <ul class="navbar-nav">
                         <li class="nav-item dropdown" id="navbarDropdown">
-                            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle text-white" href="{{route('contacts')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
                                 Контакты
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -117,13 +116,12 @@
         <div class="col-2 ">
             <x-left-menu />
         </div>
-        <div class="col-6 "  style="margin-left: 40px">
+        <div class="col-8 "  style="margin-left: 40px">
          @yield('content')
         </div>
     </div>
     <div class="row">
         <div class="footer">
-            <img id="footer_img" src="{{ asset('images/Amazing5.jpg') }}" alt="">
         </div>
     </div>
 </div>
