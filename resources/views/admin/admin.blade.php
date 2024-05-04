@@ -134,11 +134,8 @@
 
     <h4 class="text-center mt-5 mb-5"> Панель администратора</h4>
 
-    <h4 class="text-center mt-5 mb-5">------------------------------------------------</h4>
 
-    <div  id="editor"></div>
 
-    <h4 class="text-center mt-5 mb-5"> -------------------------------------------------- </h4>
 
 
 
@@ -154,7 +151,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Текст</label>
-                    <textarea class="form-control" name="text" rows="5"></textarea>
+                    <textarea class="form-control" id="text-area" name="text" rows="20"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Добавить</button>
             </form>
@@ -168,7 +165,7 @@
             <tr>
                 <th>Дата</th>
                 <th>Заголовок</th>
-                <th>Текст</th>
+{{--                <th>Текст</th>--}}
             </tr>
             </thead>
             <tbody>
@@ -176,9 +173,7 @@
                 <tr>
                     <td> {{$new->created_at}}</td>
                     <td> {{$new->title}}</td>
-                    <td>{{ strlen($new->text) > 80 ? substr($new->text, 0, 80) . '...' : $new->text }}</td>
-
-
+{{--                    <td>{{ strlen($new->text) > 80 ? substr($new->text, 0, 80) . '...' : $new->text }}</td>--}}
                 </tr>
             @endforeach
             </tbody>
@@ -192,9 +187,18 @@
 </body>
 </html>
 
+<style>
+    /* Set the height of the CKEditor instance */
+    .ck-editor__editable {
+        min-height: 200px; /* Set the minimum height */
+    }
+</style>
+
 <script>
     ClassicEditor
-        .create( document.querySelector( '#editor' ) )
+        .create( document.querySelector( '#text-area' ), {
+            minHeight: '100px' // Set the minimum height of the editor
+        } )
         .catch( error => {
             console.error( error );
         } );
