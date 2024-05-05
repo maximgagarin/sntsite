@@ -55,9 +55,10 @@ Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('ma
 
 Auth::routes();
 
-Route::get('/homeadmin', [App\Http\Controllers\AdminController::class, 'index'])->name('homeadmin');
+//Route::get('/homeadmin', [App\Http\Controllers\AdminController::class, 'index'])->name('homeadmin');
 
 Route::get('/post/add', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
+Route::delete('/post/{id}', [App\Http\Controllers\PostController::class, 'destroy'])->name('post.destroy');
 
 Route::post('upload', [App\Http\Controllers\AdminController::class, 'upload'])->name('upload');
 

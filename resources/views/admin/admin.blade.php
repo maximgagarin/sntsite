@@ -165,7 +165,8 @@
             <tr>
                 <th>Дата</th>
                 <th>Заголовок</th>
-{{--                <th>Текст</th>--}}
+                <th></th>
+
             </tr>
             </thead>
             <tbody>
@@ -173,7 +174,12 @@
                 <tr>
                     <td> {{$new->created_at}}</td>
                     <td> {{$new->title}}</td>
-{{--                    <td>{{ strlen($new->text) > 80 ? substr($new->text, 0, 80) . '...' : $new->text }}</td>--}}
+                   <td><form action="{{ route('post.destroy', $new->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Вы уверены, что хотите удалить?')">Удалить</button>
+                    </form>
+                    </td>
                 </tr>
             @endforeach
             </tbody>
