@@ -24,11 +24,20 @@ Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
 
+Route::get('/meeting', function () {
+    return view('meeting');
+})->name('meeting');
+
 
 
 Route::get('/works', function () {
     return view('works');
 })->name('works');
+
+Route::get('/document', function () {
+    return view('document');
+})->name('document');
+
 
 
 Route::middleware(['admin'])->group(function () {
@@ -49,3 +58,8 @@ Auth::routes();
 Route::get('/homeadmin', [App\Http\Controllers\AdminController::class, 'index'])->name('homeadmin');
 
 Route::get('/post/add', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
+
+Route::post('upload', [App\Http\Controllers\AdminController::class, 'upload'])->name('upload');
+
+
+
