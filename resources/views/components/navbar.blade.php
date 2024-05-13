@@ -15,17 +15,12 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown" id="navbarDropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle text-white" href="{{route('about')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
                         О товариществе
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul>
                 </li>
             </ul>
-         
+
             <ul class="navbar-nav">
                 <li class="nav-item dropdown" id="navbarDropdown">
                     <a class="nav-link dropdown-toggle text-white" href="{{route('document')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
@@ -34,7 +29,7 @@
                     <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
                         <li><a class="dropdown-item" href="{{ asset('docs/Устав.pdf') }}">Устав</a></li>
                         <li><a class="dropdown-item" href="#">Все документы</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+
                     </ul>
                 </li>
             </ul>

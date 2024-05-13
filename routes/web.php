@@ -42,6 +42,24 @@ Route::get('/bus', function () {
     return view('bus');
 })->name('bus');
 
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
+
+Route::get('/water', function () {
+    return view('water');
+})->name('water');
+
+Route::get('/bank-details', function () {
+    return view('bank-details');
+})->name('bank-details');
+
+//Route::get('/admin-news', function () {
+//    return view('admin/news');
+//})->name('admin-news');
+
+
+
 
 
 Route::middleware(['admin'])->group(function () {
