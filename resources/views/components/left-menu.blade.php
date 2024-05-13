@@ -6,7 +6,7 @@
         <a class="nav-link text-white" href="{{route('works')}}">Выполненные работы</a>
     </li>
     <li class="nav-item bg-success">
-        <a class="nav-link text-white" href="#">Расписание автобусов</a>
+        <a class="nav-link text-white" href="{{route('bus')}}">Расписание автобусов</a>
     </li>
     <li class="nav-item bg-success">
         <a class="nav-link text-white" href="#">Правление</a>

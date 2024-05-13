@@ -38,6 +38,10 @@ Route::get('/document', function () {
     return view('document');
 })->name('document');
 
+Route::get('/bus', function () {
+    return view('bus');
+})->name('bus');
+
 
 
 Route::middleware(['admin'])->group(function () {
