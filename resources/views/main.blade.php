@@ -10,6 +10,11 @@
             <p class="mt-5">
                 {!! $post->text !!}
             </p>
+
+
+            <img class="mb-3" src="  {{url('storage/' . $post->img) }}" alt="" style="max-width: 700px">
+
+
         </div>
     @endforeach
 @endsection

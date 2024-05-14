@@ -9,7 +9,7 @@ class MainController extends Controller
 {
     public function index()
     {
-        $posts = Post::orderByDesc('created_at')->get();
+        $posts = Post::where('rubric', 'news')->orderByDesc('created_at')->get();
         return view('main' , compact('posts'));
     }
 }

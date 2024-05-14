@@ -42,98 +42,35 @@
     </div>
     <div class="row">
       <x-navbar/>
-
-
-    <h4 class="text-center mt-5 mb-5"> Панель администратора</h4>
-
-
-
-
-
-
-    <h5> Добавить новость</h5>
-
-    <div class="row">
-        <div class="col-8">
-            <form action="{{route('post.store')}}">
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Заголовок</label>
-                    <textarea class="form-control" name="title" rows="2"></textarea>
-
-                </div>
-                <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Текст</label>
-                    <textarea class="form-control" id="text-area" name="text" rows="20"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Добавить</button>
-            </form>
-        </div>
-    </div>
-    <div class="row mt-5">
-        <h4>Все новости</h4>
-
-        <table class="table table-bordered border-success table-hover">
-            <thead>
-            <tr>
-                <th>Дата</th>
-                <th>Заголовок</th>
-                <th></th>
-
-            </tr>
-            </thead>
-            <tbody>
-            @foreach($news as $new)
-                <tr>
-                    <td> {{$new->created_at}}</td>
-                    <td> {{$new->title}}</td>
-                   <td><form action="{{ route('post.destroy', $new->id) }}" method="POST">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Вы уверены, что хотите удалить?')">Удалить</button>
-                    </form>
-                    </td>
-                </tr>
-            @endforeach
-            </tbody>
-        </table>
     </div>
 
-    <div class="row mt-5">
-        <h4>Загрузить документ</h4>
-       @if(isset($pdfPath))
-            <a href="{{ asset($pdfPath) }}">файл</a>
 
-        @endif
-        <div class="col-5">
-            <form action="{{ route('upload') }}" method="POST" enctype="multipart/form-data">
-                @csrf
-                <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="inputGroupFile01" name="pdf_file">
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="nameFile" name="fileName">
-                </div>
-                <button type="submit" class="btn btn-primary">Загрузить</button>
-            </form>
-        </div>
+    <h4 class="text-center mt-5 mb-5 bg-success text-white"> Панель администратора</h4>
+
+    <div class="row mb-4">
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{{route('admin')}}">Добавить новость</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.docs')}}">Документы</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.water')}}">График подачи воды</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('admin.bus')}}">Расписание автобусов</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">О товариществе</a>
+            </li>
+
+        </ul>
     </div>
 
-    <div class="row mt-5">
-        <h4>Загрузить выполненные работы</h4>
 
-        <div class="col-5">
-            <form action="" method="POST" enctype="multipart/form-data">
-                @csrf
-                <div class="input-group mb-3">
-                    <input type="file" class="form-control" id="inputGroupFile01" name="imgfile">
-                </div>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" id="nameFile" name="fileName">
-                </div>
-                <button type="submit" class="btn btn-primary">Загрузить</button>
-            </form>
-        </div>
-    </div>
+
+@yield('content')
 
 
 </div>
@@ -141,23 +78,10 @@
 
 
 
+
+
+
 </body>
 </html>
 
-<style>
-    /* Set the height of the CKEditor instance */
-    .ck-editor__editable {
-        min-height: 200px; /* Set the minimum height */
-    }
-</style>
 
-<script>
-    ClassicEditor
-        .create( document.querySelector( '#text-area' ), {
-
-            minHeight: '100px' // Set the minimum height of the editor
-        } )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>

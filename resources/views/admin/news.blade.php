@@ -2,24 +2,40 @@
 
 
 
-@extends('admin')
-@section('content-admin')
+@extends('admin.admin')
+@section('content')
 
-<h5> Добавить новость</h5>
+<h5 class="mb-4"> Добавить новость</h5>
 
 <div class="row">
     <div class="col-8">
-        <form action="{{route('post.store')}}">
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Заголовок</label>
+        <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data" >
+            @csrf
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Добавить в выполненные работы
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                <label class="form-check-label" for="flexCheckChecked">
+                   Разместить на главном баннере
+                </label>
+            </div>
+            <div class="mb-3 mt-4">
+                <label for="exampleInputEmail1" class="form-label">Заголовок новости</label>
                 <textarea class="form-control" name="title" rows="2"></textarea>
-
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Текст</label>
                 <textarea class="form-control" id="text-area" name="text" rows="20"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Добавить</button>
+            <div class=" mb-3">
+                <label for="inputGroupFile01" class="form-label">Прикрепить фото</label>
+                <input type="file" class="form-control"  name="img" >
+            </div>
+            <button type="submit" class="btn btn-primary">Добавить новость</button>
         </form>
     </div>
 </div>
@@ -32,7 +48,6 @@
             <th>Дата</th>
             <th>Заголовок</th>
             <th></th>
-
         </tr>
         </thead>
         <tbody>
