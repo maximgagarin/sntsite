@@ -26,11 +26,7 @@
                     <a class="nav-link dropdown-toggle text-white" href="{{route('document')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
                         Документы
                     </a>
-                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="{{ asset('docs/Устав.pdf') }}">Устав</a></li>
-                        <li><a class="dropdown-item" href="#">Все документы</a></li>
 
-                    </ul>
                 </li>
             </ul>
             <ul class="navbar-nav">

@@ -30,11 +30,6 @@ class AdminController extends Controller
         $file = $data['url'];
         $data['url'] =  Storage::disk('public')->put('/documents', $file);
 
-
-
-
-
-
         File::create($data);
         $files = File::all();
 
@@ -98,4 +93,13 @@ class AdminController extends Controller
         $waterText = $water->text;
         return view('admin.water' , compact('waterText'));
     }
+
+    public function docs()
+    {
+        $files = File::all();
+
+        return view('admin/docs' , compact('files'));
+    }
+
+
 }

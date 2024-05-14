@@ -16,22 +16,16 @@ use App\Http\Controllers\AdminController;
 */
 
 
-
+Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('main');
 
 Route::get('/contacts', function () {
     return view('contacts');
 })->name('contacts');
 
-Route::get('/meeting', function () {
-    return view('meeting');
-})->name('meeting');
-
-
 
 Route::get('/works', function () {
     return view('works');
 })->name('works');
-
 
 
 Route::get('/bus', [App\Http\Controllers\BusController::class, 'index'])->name('bus');
@@ -44,17 +38,9 @@ Route::get('/about', function () {
     return view('about');
 })->name('about');
 
-
-
 Route::get('/bank-details', function () {
     return view('bank-details');
 })->name('bank-details');
-
-//Route::get('/admin-news', function () {
-//    return view('admin/news');
-//})->name('admin-news');
-
-
 
 
 
@@ -63,28 +49,27 @@ Route::middleware(['admin'])->group(function () {
     Route::post('/admin/bus/edit', [App\Http\Controllers\AdminController::class, 'editBus'])->name('edit.bus');
     Route::post('/admin/water/edit', [App\Http\Controllers\AdminController::class, 'editWater'])->name('edit.water');
 
-    Route::get('/admin/docs', function () {
-        return view('admin.docs');
-    })->name('admin.docs');
+//    Route::get('/admin/docs', function () {
+//        return view('admin.docs');
+//    })->name('admin.docs');
 
 
     Route::get('/admin/bus', [App\Http\Controllers\AdminController::class, 'bus'])->name('admin.bus');
+    Route::get('/admin/docs', [App\Http\Controllers\AdminController::class, 'docs'])->name('admin.docs');
     Route::get('/admin/water', [App\Http\Controllers\AdminController::class, 'water'])->name('admin.water');
 
 
     Route::post('/post/add', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
     Route::delete('/post/{id}', [App\Http\Controllers\PostController::class, 'destroy'])->name('post.destroy');
+    Route::delete('/docs/{id}', [App\Http\Controllers\DocsController::class, 'destroy'])->name('docs.destroy');
 
     Route::post('upload', [App\Http\Controllers\AdminController::class, 'upload'])->name('docs.upload');
 
 });
 
 
-
-
-
 Route::get('/admin3', [App\Http\Controllers\HomeController::class, 'index'])->name('registr');
-Route::get('/', [App\Http\Controllers\MainController::class, 'index'])->name('main');
+
 
 
 
@@ -97,7 +82,7 @@ Auth::routes([
     'reset' => false,
 ]);
 
-//Route::get('/homeadmin', [App\Http\Controllers\AdminController::class, 'index'])->name('homeadmin');
+
 
 
 

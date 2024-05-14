@@ -45,10 +45,11 @@
     </div>
 
 
-    <h4 class="text-center mt-5 mb-5 bg-success text-white"> Панель администратора</h4>
+    <h4 class="text-center mt-5 mb-2 bg-success text-white"> Панель администратора</h4>
 
-    <div class="row mb-4">
-        <ul class="nav">
+    <div class="row mb-4 justify-content-center">
+       <div class="col-8">
+           <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{route('admin')}}">Добавить новость</a>
             </li>
@@ -64,8 +65,8 @@
             <li class="nav-item">
                 <a class="nav-link" href="#">О товариществе</a>
             </li>
-
         </ul>
+       </div>
     </div>
 
 

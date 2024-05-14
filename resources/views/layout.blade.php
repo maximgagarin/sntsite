@@ -33,7 +33,7 @@
             </p>
         </div>
         <div class="col-3">
-            <span class=" mt-3  " style="font-size: 16px; display: block">тел. 8-999-999-99-99</span>
+            <span class=" mt-3  " style="font-size: 16px; display: block">тел. 79-40-68</span>
             <span class="text-center text-success">e-mail: kbgtwr39@yandex.ru</span>
         </div>
     </div>
