@@ -3,7 +3,7 @@
 
 @extends('admin.admin')
 @section('content')
-    <h4>Расписание автобусов</h4>
+    <h4>Тарифы</h4>
     <div class="row">
         <div class="col-8">
             <form action="{{route('edit.tarif')}}" method="post">
