@@ -11,18 +11,7 @@
     <div class="col-8">
         <form action="{{route('post.store')}}" method="post" enctype="multipart/form-data" >
             @csrf
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                <label class="form-check-label" for="flexCheckDefault">
-                    Добавить в выполненные работы
-                </label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                <label class="form-check-label" for="flexCheckChecked">
-                   Разместить на главном баннере
-                </label>
-            </div>
+
             <div class="mb-3 mt-4">
                 <label for="exampleInputEmail1" class="form-label">Заголовок новости</label>
                 <textarea class="form-control" name="title" rows="2"></textarea>
@@ -35,6 +24,19 @@
                 <label for="inputGroupFile01" class="form-label">Прикрепить фото</label>
                 <input type="file" class="form-control"  name="img" >
             </div>
+            <div class="mb-3">
+                <input class="form-check-input" type="checkbox" value="1" name="work" id="">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Добавить в выполненные работы
+                </label>
+            </div>
+            <div class="form-check mb-2">
+                <input class="form-check-input" type="checkbox" value="1" name="banner" id="" >
+                <label class="form-check-label" for="flexCheckChecked">
+                    Разместить на главном баннере
+                </label>
+            </div>
+
             <button type="submit" class="btn btn-primary">Добавить новость</button>
         </form>
     </div>

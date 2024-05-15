@@ -58,6 +58,35 @@ class AdminController extends Controller
         return redirect()->back()->with('error', 'Запись не найдена');
     }
 
+    public function editTarif(Request $request)
+    {
+        $data = $request->validate([
+            'text' => '',
+        ]);
+
+        $data['rubric'] = 'tarif';
+
+        // Найдем запись для редактирования
+        $tarif = Post::where('rubric', 'tarif')->first();
+
+        // Если запись найдена, обновим её
+        if ($tarif) {
+            $tarif->update($data);
+            return redirect()->back()->with('success', 'Сохранено');
+        }
+
+        // Если запись не найдена, выполним необходимые действия
+        //  возврат к предыдущей странице с сообщением об ошибке
+        return redirect()->back()->with('error', 'Запись не найдена');
+    }
+
+    public function tarif()
+    {
+        $tarif = Post::where('rubric', 'tarif')->first();
+        $tarifText = $tarif->text;
+        return view('admin.tarif' , compact('tarifText'));
+    }
+
     public function bus()
     {
         $bus = Post::where('rubric', 'bus')->first();

@@ -1,8 +1,18 @@
 @extends('layout')
 @section('content')
-    <div id="works">
-        <h5 class="mb-4">Выполненные работы</h5>
-        <p> 02.11.2023 год. Засыпка ям на 11 улице возле участков </p>
-        <img src="{{ asset('images/work1.jpg') }}" alt="Amazing Image">
-    </div>
+    <h5 class="mb-4">Выполненные работы</h5>
+    @foreach($works as $post)
+        <div id="news" class="mb-5">
+            <a href=""> <h5>{{$post->title}}</h5></a>
+            <div style="width: 120px"><p class="text-center" style="background:lightgray; font-size: 12px; color:grey"> {{$post->created_at}}</p></div>
+            <p class="mt-5">
+                {!! $post->text !!}
+            </p>
+
+
+            <img class="mb-3" src="  {{url('storage/' . $post->img) }}" alt="" style="max-width: 700px">
+
+
+        </div>
+    @endforeach
 @endsection

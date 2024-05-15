@@ -15,8 +15,8 @@
             </ul>
             <ul class="navbar-nav">
                 <li class="nav-item dropdown" id="navbarDropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="{{route('about')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                        О товариществе
+                    <a class="nav-link dropdown-toggle text-white" href="{{route('tarif')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
+                        Тарифы
                     </a>
                 </li>
             </ul>

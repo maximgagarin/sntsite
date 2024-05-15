@@ -21,6 +21,7 @@ class CreatePostsTable extends Migration
 
             $table->string('rubric')->nullable();
             $table->string('img')->nullable();
+            $table->string('work')->nullable();
         });
     }
 

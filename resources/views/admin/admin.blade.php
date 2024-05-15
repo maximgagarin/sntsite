@@ -15,40 +15,83 @@
     <link rel="stylesheet" href="/style.css">
     <title>Document</title>
 </head>
-
 <body>
 <div class="container">
-
-
-
-
-    <div class="row justify-content-between head bg-success ">
+    <div class="row justify-content-between head ">
         <div class="col-5 mt-2">
             <div class="row">
-                <div class="col-2">
-                    <img src="{{ asset('images/logo5.jpg') }}" alt="">
+                <div class="col-4">
+                    <img src="{{ asset('images/logo-red.jpg') }}" alt="">
                 </div>
                 <div class="col-6">
-                    <h2 style=" margin: 0; color: white "><span class="text-warning">СНТ</span> "ЗАРЯ-2"</h2>
-                    <p style=" margin-top: 0; font-size: 12px; color: white ">садоводческое некоммерческое
-                        товарищество</p>
+                    <h1 style=" margin: 0; "> СНТ</h1>
+                    <p style=" margin-top: 0; font-size: 20px;  ">"ЗАРЯ-2"</p>
                 </div>
             </div>
         </div>
         <div class="col-2">
-            <span class=" mt-3 text-warning " style="font-size: 16px; display: block">тел. 8-999-999-99-99</span>
-            <span class="text-center  text-white">e-mail: snt@snt.ru</span>
+            <span class=" mt-3 " style="font-size: 16px; display: block">тел. 8-999-999-99-99</span>
+            <span class="text-center ">e-mail: snt@snt.ru</span>
         </div>
     </div>
     <div class="row">
-      <x-navbar/>
+
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse justify-content-between" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown" id="navbarDropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="{{route('main')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
+                                Главная
+                            </a>
+                            {{--                    <ul class="dropdown-menu dropdown-menu-dark text-white" aria-labelledby="navbarDropdown">--}}
+                            {{--                        <li><a class="dropdown-item" href="#">Action</a></li>--}}
+                            {{--                        <li><a class="dropdown-item" href="#">Another action</a></li>--}}
+                            {{--                        <li><a class="dropdown-item" href="#">Something else here</a></li>--}}
+                            {{--                    </ul>--}}
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown" id="navbarDropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="{{route('tarif')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
+                                Тарифы
+                            </a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown" id="navbarDropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="{{route('document')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
+                                Документы
+                            </a>
+
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown" id="navbarDropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="{{route('contacts')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
+                                Контакты
+                            </a>
+
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="" aria-label="Найти">
+                        <button class="btn btn-primary" type="submit">Поиск</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
     </div>
 
 
-    <h4 class="text-center mt-5 mb-2 bg-success text-white"> Панель администратора</h4>
+    <h4 class="text-center mt-5 mb-2 bg-primary text-white"> Панель администратора</h4>
 
     <div class="row mb-4 justify-content-center">
-       <div class="col-8">
+       <div class="col-9">
            <ul class="nav">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{route('admin')}}">Добавить новость</a>
@@ -62,26 +105,17 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{route('admin.bus')}}">Расписание автобусов</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">О товариществе</a>
-            </li>
+
+               <li class="nav-item">
+                   <a class="nav-link" href="{{route('admin.tarif')}}">Тарифы</a>
+               </li>
         </ul>
        </div>
     </div>
 
-
-
 @yield('content')
 
-
 </div>
-
-
-
-
-
-
-
 </body>
 </html>
 
