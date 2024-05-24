@@ -59,7 +59,7 @@
                 <td> {{$new->created_at}}</td>
                 <td> {{$new->title}}</td>
                 <td>
-                    <form action="" method="post">
+                    <form action="{{route('news.edit', $new->id)}}" method="post">
                         @csrf
                         <button type="submit" class="btn btn-primary btn-sm">Редактировать</button>
                     </form>

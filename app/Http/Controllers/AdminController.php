@@ -11,11 +11,8 @@ class AdminController extends Controller
 {
     public function index()
     {
-
         $news = Post::where('rubric', 'news')->get();
-
         return view('admin/news', compact('news'));
-
     }
 
     public function upload(Request $request)
@@ -128,6 +125,35 @@ class AdminController extends Controller
         $files = File::all();
 
         return view('admin/docs' , compact('files'));
+    }
+
+    public function newsEdit($id)
+    {
+        $news= Post::where('id' , $id)->first();
+        return view('admin/news-edit', compact('news'));
+    }
+
+    public function newsUpdate(Request $request)
+    {
+
+        $data = $request->validate([
+            'text' => 'required|string',
+            'title' => 'required|string',
+            'id' => '',
+        ]);
+
+
+
+
+        // Найдем запись для редактирования
+        $newsEdit = Post::find($data['id']);
+        $newsEdit->update($data);
+
+        $news = Post::where('rubric', 'news')->get();
+        return redirect()->route('admin');
+
+
+
     }
 
 

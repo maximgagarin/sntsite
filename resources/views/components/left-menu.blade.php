@@ -1,33 +1,18 @@
 <ul class="nav flex-column">
-
     <li class="nav-item bg-success">
-        <a class="nav-link text-white" href="{{route('main')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-            Главная
-        </a>
+        <a class="nav-link text-white" href="{{route('main')}}">Главная</a>
     </li>
-
     <li class="nav-item bg-success">
-        <a class="nav-link  text-white" href="{{route('tarif')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-            Тарифы
-        </a>
+        <a class="nav-link  text-white" href="{{route('tarif')}}"> Тарифы </a>
     </li>
-
-
     <li class="nav-item bg-success">
-        <a class="nav-link  text-white" href="{{route('document')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-            Документы
-        </a>
+        <a class="nav-link  text-white" href="{{route('document')}}">Документы</a>
     </li>
-
-
     <li class="nav-item bg-success">
-        <a class="nav-link  text-white" href="{{route('contacts')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-            Контакты
-        </a>
+        <a class="nav-link  text-white" href="{{route('contacts')}}">Контакты</a>
     </li>
-
     <li class="nav-item bg-success">
-        <a class="nav-link text-white"  href="{{route('water')}}">График подачи воды</a>
+        <a class="nav-link text-white" href="{{route('water')}}">График подачи воды</a>
     </li>
     <li class="nav-item bg-success">
         <a class="nav-link text-white" href="{{route('works')}}">Выполненные работы</a>
@@ -41,12 +26,9 @@
     <li class="nav-item bg-success">
         <a class="nav-link text-white" href="{{route('registr')}}">Вход</a>
     </li>
-
-
-
-@auth
-    <li class="nav-item bg-success">
-        <a class="nav-link text-white" href="{{route('admin')}}">Администратор</a>
-    </li>
+    @auth
+        <li class="nav-item bg-success">
+            <a class="nav-link text-white" href="{{route('admin')}}">Администратор</a>
+        </li>
     @endauth
 </ul>

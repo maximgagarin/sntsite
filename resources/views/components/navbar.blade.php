@@ -1,31 +1,18 @@
 
-
-
-            <ul class="navbar-nav" style="background-color: lightgray">
-                <li class="nav-item dropdown" id="navbarDropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="{{route('main')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                        Главная
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown" id="navbarDropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="{{route('tarif')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                        Тарифы
-                    </a>
-                </li>
-
-
-                <li class="nav-item dropdown" id="navbarDropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="{{route('document')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                        Документы
-                    </a>
-                </li>
-
-
-                <li class="nav-item dropdown" id="navbarDropdown">
-                    <a class="nav-link dropdown-toggle text-white" href="{{route('contacts')}}" id="navbarDarkDropdownMenuLink" role="button" aria-expanded="false">
-                        Контакты
-                    </a>
-                </li>
-            </ul>
+<div class="col-2 mt-2">
+<ul class="nav flex-column">
+    <li class="nav-item bg-success">
+        <a class="nav-link text-white" href="{{route('main')}}">Главная</a>
+    </li>
+    <li class="nav-item bg-success">
+        <a class="nav-link  text-white" href="{{route('tarif')}}"> Тарифы </a>
+    </li>
+    <li class="nav-item bg-success">
+        <a class="nav-link  text-white" href="{{route('document')}}">Документы</a>
+    </li>
+    <li class="nav-item bg-success">
+        <a class="nav-link  text-white" href="{{route('contacts')}}">Контакты</a>
+    </li>
+</ul>
+</div>
 

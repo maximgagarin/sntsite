@@ -62,11 +62,15 @@ Route::middleware(['admin'])->group(function () {
     Route::get('/admin/tarif', [App\Http\Controllers\AdminController::class, 'tarif'])->name('admin.tarif');
 
 
+
     Route::post('/post/add', [App\Http\Controllers\PostController::class, 'store'])->name('post.store');
     Route::delete('/post/{id}', [App\Http\Controllers\PostController::class, 'destroy'])->name('post.destroy');
     Route::delete('/docs/{id}', [App\Http\Controllers\DocsController::class, 'destroy'])->name('docs.destroy');
 
     Route::post('upload', [App\Http\Controllers\AdminController::class, 'upload'])->name('docs.upload');
+
+    Route::post('/admin/news/{id}', [App\Http\Controllers\AdminController::class, 'newsEdit'])->name('news.edit');
+    Route::post('/news/update', [App\Http\Controllers\AdminController::class, 'newsUpdate'])->name('news.update');
 
 });
 

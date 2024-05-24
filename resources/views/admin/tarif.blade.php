@@ -11,8 +11,8 @@
                 <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Текст</label>
                     <textarea class="form-control" id="area-tarif" name="text" rows="20">
-    {{ $tarifText }}
-</textarea>
+                      {{ $tarifText }}
+                    </textarea>
 
                 </div>
                 <button type="submit" class="btn btn-primary">Сохранить</button>

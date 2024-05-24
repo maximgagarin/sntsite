@@ -1,7 +1,7 @@
 @extends('layout')
 @section('content')
-    <div >
-
+    <div class="water" >
+<h5>График подачи воды</h5>
         {!! $waterText !!}
     </div>
 

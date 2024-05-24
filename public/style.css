@@ -31,7 +31,7 @@
 
 h5{
     color: darkred;
-    background-color: lightgrey;
+    background-color: gainsboro;
 }
 
 
@@ -45,12 +45,38 @@ margin: 0;
 }
 
 @media (max-width: 1000px) {
-    .logo-h2{
+    .logo-h2 {
         font-size: 16px;
 
     }
 
-    .span-logo{
+    .span-logo {
+        font-size: 12px;
+    }
+
+    .nav {
+        font-size: 12px;
+    }
+
+    .nav-link {
+        padding: 0;
+    }
+
+    .bus{
+        font-size: 10px;
+    }
+
+    .water{
+        font-size: 10px;
+    }
+
+    h5{
         font-size: 12px;
     }
 }
+
+
+ul li{
+    margin-bottom: 1px;
+}
+

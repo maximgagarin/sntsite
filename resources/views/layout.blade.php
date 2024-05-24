@@ -19,10 +19,10 @@
     <div class="row justify-content-between head  " style="background-color: lightgray">
         <div class="col-lg-4 col-8 mt-2">
             <div class="row">
-                <div class="col-3">
+                <div class="col-4">
                     <img src="{{ asset('images/logo5.jpg') }}" alt="">
                 </div>
-                <div class="col-9">
+                <div class="col-8">
                     <h2 class="logo-h2"><span class="text-danger">СНТ</span> "ЗАРЯ-2"</h2>
                     <p class="logo-p" style=" margin-top: 0; font-size: 12px; ">садоводческое некоммерческое
                         товарищество</p>
@@ -38,10 +38,10 @@
 
 
     <div class="row mt-5 ">
-        <div class="col-lg-2 col">
+        <div class="col-lg-2 col-3">
             <x-left-menu/>
         </div>
-        <div class="col-lg-8 col " style="margin-left: 40px">
+        <div class="col-lg-8 col-9 " >
             @yield('content')
         </div>
     </div>
