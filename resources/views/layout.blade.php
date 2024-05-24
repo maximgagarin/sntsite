@@ -25,15 +25,15 @@
         </div>
     </div>
 
-    <div class="row justify-content-between head  "  ">
+    <div class="row justify-content-between head  " >
         <div class="col-lg-4 col-8 mt-2">
             <div class="row">
                 <div class="col-4">
                     <img src="{{ asset('images/logo5.jpg') }}" alt="">
                 </div>
                 <div class="col-8">
-                    <h2 class="logo-h2"><span class="text-danger">СНТ</span> "ЗАРЯ-2"</h2>
-                    <p class="logo-p" style=" margin-top: 0; font-size: 12px; ">садоводческое некоммерческое
+                    <h2 class="logo-h2 text-white"><span class="text-white">СНТ</span> "ЗАРЯ-2"</h2>
+                    <p class="logo-p" style=" margin-top: 0; font-size: 12px; color: white">садоводческое некоммерческое
                         товарищество</p>
                 </div>
             </div>
