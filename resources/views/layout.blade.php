@@ -15,17 +15,9 @@
 </head>
 <body class="body">
 <div class="container">
-    <div class="row">
-        <div class="head-head">
-<ul class="nav__ul" style="">
-    <li>890909900</li>
-    <li>assaff</li>
-    <li>sdfdf</li>
-</ul>
-        </div>
-    </div>
 
-    <div class="row justify-content-between head  "  ">
+
+    <div class="row justify-content-between head "  >
         <div class="col-lg-4 col-8 mt-2">
             <div class="row">
                 <div class="col-4">
