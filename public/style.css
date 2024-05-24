@@ -117,10 +117,15 @@ ul li{
     color: white;
 }
 
+.nav{
+    display: flex;
+}
+
 .nav-item{
 
 }
 
 .nav-link{
-    color: #29B638;
+    font-size: 18px;
+    color: #dddddd;
 }

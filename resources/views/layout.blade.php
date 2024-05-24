@@ -17,39 +17,66 @@
 <div class="container">
     <div class="row">
         <div class="head-head">
-<ul class="nav__ul" style="">
-    <li>890909900</li>
-    <li>assaff</li>
-    <li>sdfdf</li>
-</ul>
+            <ul class="nav__ul" style="">
+                <li>890909900</li>
+                <li>assaff</li>
+                <li>sdfdf</li>
+            </ul>
         </div>
     </div>
-
     <div class="row justify-content-between head  " >
-        <div class="col-lg-4 col-8 mt-2">
-            <div class="row">
-                <div class="col-4">
-                    <img src="{{ asset('images/logo5.jpg') }}" alt="">
+            <div class="row mt-3" style="background-color: #192919">
+                <div class="col-2">
+                    <img src="{{ asset('images/logo-green.jpg') }}" alt="">
                 </div>
-                <div class="col-8">
-                    <h2 class="logo-h2 text-white"><span class="text-white">СНТ</span> "ЗАРЯ-2"</h2>
-                    <p class="logo-p" style=" margin-top: 0; font-size: 12px; color: white">садоводческое некоммерческое
-                        товарищество</p>
+                <div class="col-10">
+                    <ul class="nav ">
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{route('main')}}">Главная</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  " href="{{route('tarif')}}"> Тарифы </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  " href="{{route('document')}}">Документы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  " href="{{route('contacts')}}">Контакты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{route('water')}}">График подачи воды</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{route('works')}}">Выполненные работы</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{route('bus')}}">Расписание автобусов</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{route('bank-details')}}">Реквизиты</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="{{route('registr')}}">Вход</a>
+                        </li>
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link " href="{{route('admin')}}">Администратор</a>
+                            </li>
+                        @endauth
+                    </ul>
+
                 </div>
             </div>
-        </div>
-        <div class="col-lg-3 col-4">
-            <span class="span-logo mt-2">тел. 79-40-68</span>
-            <span class="span-logo  text-success">e-mail: kbgtwr39@yandex.ru</span>
-        </div>
+
+
     </div>
 
 
 
     <div class="row mt-5 ">
-        <div class="col-lg-2 col-3">
-            <x-left-menu/>
-        </div>
+{{--        <div class="col-lg-2 col-3">--}}
+{{--            <x-left-menu/>--}}
+{{--        </div>--}}
         <div class="col-lg-8 col-9 " >
             @yield('content')
         </div>
