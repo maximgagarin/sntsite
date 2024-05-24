@@ -38,10 +38,10 @@
 
 
     <div class="row mt-5 ">
-        <div class="col-lg-2 col-3">
+        <div class="col-lg-2 col">
             <x-left-menu/>
         </div>
-        <div class="col-lg-8 col-8 " style="margin-left: 40px">
+        <div class="col-lg-8 col " style="margin-left: 40px">
             @yield('content')
         </div>
     </div>

@@ -33,7 +33,7 @@
             <div class="form-check mb-2">
                 <input class="form-check-input" type="checkbox" value="1" name="banner" id="" >
                 <label class="form-check-label" for="flexCheckChecked">
-                    Разместить на главном баннере
+                    Закрепить новость
                 </label>
             </div>
 
@@ -50,6 +50,7 @@
             <th>Дата</th>
             <th>Заголовок</th>
             <th></th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -57,6 +58,12 @@
             <tr>
                 <td> {{$new->created_at}}</td>
                 <td> {{$new->title}}</td>
+                <td>
+                    <form action="" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-primary btn-sm">Редактировать</button>
+                    </form>
+                </td>
                 <td><form action="{{ route('post.destroy', $new->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
