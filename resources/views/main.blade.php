@@ -2,7 +2,7 @@
 @section('content')
 
 
-<h5 class="mb-2">Новости</h5>
+<h5 class="mb-5">Новости</h5>
     @foreach($posts as $post)
         <div id="news" class="mb-5">
             <a href=""> <h5>{{$post->title}}</h5></a>

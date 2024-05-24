@@ -20,7 +20,7 @@ class AdminController extends Controller
 
     {
         $data = \request()->validate([
-            'text' => '',
+            'text' => 'required',
             'url' => 'nullable',
         ]);
 

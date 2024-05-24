@@ -16,6 +16,15 @@
     <title>Document</title>
 </head>
 <body>
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 <div class="container">
     <div class="row justify-content-between head  " style="background-color: lightgray">
         <div class="col-lg-4 col-8 mt-2">
