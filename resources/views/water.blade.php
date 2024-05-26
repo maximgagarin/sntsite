@@ -6,11 +6,15 @@
     </div>
 
     <style>
+        h3{
+            color:white;
+        }
         table {
             width: 100%;
             margin-bottom: 20px;
             border: 1px solid #dddddd;
             border-collapse: collapse;
+            color:white;
         }
         table th {
             font-weight: bold;
