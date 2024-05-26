@@ -15,7 +15,16 @@
 </head>
 <body class="body">
 <div class="container">
-
+    <div class="row">
+        <div class="head-head">
+            <ul class="nav__ul" style="font-size: 14px">
+                <li>садоводческое некоммерческое товарищество "Заря-2"</li>
+                <li>тел. 79-40-68</li>
+                <li>e-mail: kbgtwr39@yandex.ru</li>
+                <li>Офис: Боевый пр. 39 пн-пт</li>
+            </ul>
+        </div>
+    </div>
 
     <div class="row justify-content-between head "  >
         <div class="col-lg-4 col-8 mt-2">
