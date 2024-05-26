@@ -17,10 +17,11 @@
 <div class="container">
     <div class="row">
         <div class="head-head">
-            <ul class="nav__ul" style="">
-                <li>890909900</li>
-                <li>assaff</li>
-                <li>sdfdf</li>
+            <ul class="nav__ul" style="font-size: 14px">
+                <li>садоводческое некоммерческое товарищество "Заря-2"</li>
+                <li>тел. 79-40-68</li>
+                <li>e-mail: kbgtwr39@yandex.ru</li>
+                <li>Офис: Боевый пр. 39 пн-пт</li>
             </ul>
         </div>
     </div>
@@ -64,27 +65,23 @@
                             </li>
                         @endauth
                     </ul>
-
                 </div>
             </div>
-
-
     </div>
-
-
-
+    <div class="row mt-4 mb-4" >
+        <div >
+            <x-carusel />
+        </div>
+    </div>
     <div class="row mt-5 ">
-{{--        <div class="col-lg-2 col-3">--}}
-{{--            <x-left-menu/>--}}
-{{--        </div>--}}
-        <div class="col-lg-8 col-9 " >
+        <div class="col-lg-8 col-12 " >
             @yield('content')
         </div>
     </div>
-
 </div>
 <div class="row">
     <div class="footer">
+        <p class="text-center" style="margin-top: 70px; font-weight: bold">Садоводческое некомерческое товарищество "Заря-2" </p>
     </div>
 </div>
 </body>
