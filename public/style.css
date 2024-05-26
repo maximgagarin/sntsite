@@ -5,7 +5,10 @@ body{
 }
 
 .head{
-    background-color: white;
+    background-color: #121F12;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+
 }
 
 #news{
@@ -33,6 +36,7 @@ h5{
 
 .logo-h2{
 margin: 0;
+    color: white;
 }
 
 .span-logo{
@@ -86,6 +90,10 @@ ul li{
     text-decoration: none;
     color: white;
     font-weight: bold;
+}
+
+.nav-item{
+
 }
 
 .head-head{

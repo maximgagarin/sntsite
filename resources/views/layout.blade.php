@@ -22,69 +22,31 @@
                 <li>тел. 79-40-68</li>
                 <li>e-mail: kbgtwr39@yandex.ru</li>
                 <li>Офис: Боевый пр. 39 пн-пт</li>
+                <li>
+                    <a  style="color: black" href="{{route('registr')}}">Вход</a>
+                </li>
+                @auth
+                    <li >
+                        <a style="color: black" href="{{route('admin')}}">Админ</a>
+                    </li>
+                @endauth
             </ul>
         </div>
     </div>
 
-    <div class="row justify-content-between head "  >
-        <div class="col-lg-4 col-8 mt-2">
-            <div class="row">
-
-                <div class="col-2">
-                    <h2 class="logo-h2"><span class="text-danger">СНТ</span> "ЗАРЯ-2"</h2>
+    <div class="row justify-content-between head  mt-1"  >
+                <div class="col-2 ">
+                    <h2 class="logo-h2"><span style="color: #29B638">СНТ</span> "ЗАРЯ-2"</h2>
                 </div>
                 <div class="col-10">
-                    <ul >
-                        <li class="nav-item bg-success">
-                            <a class="nav-link text-white" href="{{route('main')}}">Главная</a>
-                        </li>
-                        <li class="nav-item bg-success">
-                            <a class="nav-link  text-white" href="{{route('tarif')}}"> Тарифы </a>
-                        </li>
-                        <li class="nav-item bg-success">
-                            <a class="nav-link  text-white" href="{{route('document')}}">Документы</a>
-                        </li>
-                        <li class="nav-item bg-success">
-                            <a class="nav-link  text-white" href="{{route('contacts')}}">Контакты</a>
-                        </li>
-                        <li class="nav-item bg-success">
-                            <a class="nav-link text-white" href="{{route('water')}}">График подачи воды</a>
-                        </li>
-                        <li class="nav-item bg-success">
-                            <a class="nav-link text-white" href="{{route('works')}}">Выполненные работы</a>
-                        </li>
-                        <li class="nav-item bg-success">
-                            <a class="nav-link text-white" href="{{route('bus')}}">Расписание автобусов</a>
-                        </li>
-                        <li class="nav-item bg-success">
-                            <a class="nav-link text-white" href="{{route('bank-details')}}">Реквизиты</a>
-                        </li>
-                        <li class="nav-item bg-success">
-                            <a class="nav-link text-white" href="{{route('registr')}}">Вход</a>
-                        </li>
-                        @auth
-                            <li class="nav-item bg-success">
-                                <a class="nav-link text-white" href="{{route('admin')}}">Администратор</a>
-                            </li>
-                        @endauth
-                    </ul>
+                   <x-menu />
                 </div>
-            </div>
-        </div>
-
     </div>
-
-
-
     <div class="row mt-5 ">
-        <div class="col-lg-2 col-3">
-            <x-left-menu/>
-        </div>
-        <div class="col-lg-8 col-9 " >
+        <div class="col-lg-12 col-12 " >
             @yield('content')
         </div>
     </div>
-
 </div>
 <div class="row">
     <div class="footer">
