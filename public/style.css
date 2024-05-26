@@ -88,4 +88,13 @@ ul li{
     font-weight: bold;
 }
 
-
+.head-head{
+    margin-top: 10px;
+    background-color: #29B638;
+    height: 40px;
+    width: 100%;
+    border-top-left-radius:7px ;
+    border-top-right-radius:7px ;
+    align-items: center;
+    padding: 7px;
+}
