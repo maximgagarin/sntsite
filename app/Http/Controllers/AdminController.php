@@ -12,6 +12,7 @@ class AdminController extends Controller
     public function index()
     {
         $news = Post::where('rubric', 'news')->get();
+
         return view('admin/news', compact('news'));
     }
 
@@ -129,7 +130,9 @@ class AdminController extends Controller
 
     public function newsEdit($id)
     {
+
         $news= Post::where('id' , $id)->first();
+
         return view('admin/news-edit', compact('news'));
     }
 
@@ -140,20 +143,25 @@ class AdminController extends Controller
             'text' => 'required|string',
             'title' => 'required|string',
             'id' => '',
+            'pin' => 'nullable',
         ]);
-
-
 
 
         // Найдем запись для редактирования
         $newsEdit = Post::find($data['id']);
+
+
+        //проверяем закреплена ли новость
+        if (isset($data['pin'])){
+            $data['pin'] =  1;
+        } else{
+            $data['pin'] =  0;
+        }
+
         $newsEdit->update($data);
 
-        $news = Post::where('rubric', 'news')->get();
+        //$news = Post::where('rubric', 'news')->get();
         return redirect()->route('admin');
-
-
-
     }
 
 

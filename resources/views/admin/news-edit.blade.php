@@ -15,6 +15,12 @@
                         {{ $news->text }}
                     </textarea>
                 </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" {{$news->pin === 1 ? 'checked' : ''}} name="pin" id="" >
+                    <label class="form-check-label" for="flexCheckChecked">
+                        Закрепить новость
+                    </label>
+                </div>
                 <input type="hidden" value="{{$news->id}}" name="id">
                 <div class="mb-3">
                     <button type="submit" class="btn btn-primary">Сохранить</button>

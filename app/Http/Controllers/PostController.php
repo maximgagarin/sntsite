@@ -15,6 +15,7 @@ class PostController extends Controller
             'text' => '',
             'img' => 'nullable',
             'work'=>'nullable',
+            'pin'=>'nullable',
         ]);
 
         if (isset($data['img'])){
@@ -24,6 +25,10 @@ class PostController extends Controller
 
         if (isset($data['work'])){
             $data['work'] =  1;
+        }
+
+        if (isset($data['pin'])){
+            $data['pin'] =  1;
         }
 
 

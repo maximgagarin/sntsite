@@ -85,7 +85,7 @@ Auth::routes([
     'confirm' => false,
     'forgot' => false,
     'login' => true,
-    'register' =>false,
+    'register' =>true,
     'reset' => false,
 ]);
 

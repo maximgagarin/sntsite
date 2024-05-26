@@ -31,7 +31,7 @@
                 </label>
             </div>
             <div class="form-check mb-2">
-                <input class="form-check-input" type="checkbox" value="1" name="banner" id="" >
+                <input class="form-check-input" type="checkbox" value="1" name="pin" id="" >
                 <label class="form-check-label" for="flexCheckChecked">
                     Закрепить новость
                 </label>
