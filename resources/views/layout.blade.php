@@ -35,10 +35,10 @@
     </div>
 
     <div class="row justify-content-between head  mt-1"  >
-                <div class="col-2 mt-2">
+                <div class="col-lg-2 col-12 mt-2">
                     <h2 class="logo-h2"><span style="color: #29B638; font-weight: bold">СНТ</span> "ЗАРЯ-2"</h2>
                 </div>
-                <div class="col-10">
+                <div class="col-lg-10 col-12">
                    <x-menu />
                 </div>
     </div>

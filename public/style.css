@@ -44,54 +44,6 @@ margin: 0;
     display: block;
 }
 
-@media (max-width: 1000px) {
-    .logo-h2 {
-        font-size: 16px;
-    }
-
-    .span-logo {
-        font-size: 12px;
-    }
-
-    .nav {
-        font-size: 12px;
-    }
-
-    .nav-link {
-        padding: 0;
-    }
-
-    .bus{
-        font-size: 12px;
-    }
-
-    .water{
-        font-size: 12px;
-    }
-
-    h5{
-        font-size: 12px;
-    }
-
-    .head-head{
-       display: none;
-    }
-
-    .menu{
-        font-size: 14px;
-        display: block;
-        list-style-type: none;
-        column-count: 2;
-    }
-
-    .nav-item{
-
-    }
-
-    .head{
-
-    }
-}
 
 
 ul li{
@@ -130,5 +82,54 @@ ul li{
    display: block;
     list-style-type: none;
     column-count: 4;
-
 }
+
+@media (max-width: 768px) {
+    .logo-h2 {
+        font-size: 16px;
+    }
+
+    .span-logo {
+        font-size: 12px;
+    }
+
+    .nav {
+        font-size: 12px;
+    }
+
+    .nav-link {
+        padding: 0;
+    }
+
+    .bus{
+        font-size: 14px;
+    }
+
+    .water{
+        font-size: 14px;
+    }
+
+    h5{
+        font-size: 14px;
+    }
+
+    .head-head{
+        display: none;
+    }
+
+    .menu{
+        font-size: 14px;
+        display: block;
+        list-style-type: none;
+        column-count: 3;
+    }
+
+    .nav-item{
+
+    }
+
+    .head{
+        height: 150px;
+    }
+}
+
