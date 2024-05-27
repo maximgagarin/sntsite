@@ -8,7 +8,6 @@ body{
     background-color: #121F12;
     border-bottom-left-radius: 7px;
     border-bottom-right-radius: 7px;
-
 }
 
 #news{
@@ -20,12 +19,12 @@ body{
 }
 
 .footer{
-    height: 200px;
+    height: 4px;
+    background-color: #29B638;
 }
 
 #footer_img{
     width: 100%;
-
 }
 
 h5{
@@ -37,6 +36,7 @@ h5{
 .logo-h2{
 margin: 0;
     color: white;
+    font-weight: bold;
 }
 
 .span-logo{
@@ -72,6 +72,25 @@ margin: 0;
     h5{
         font-size: 12px;
     }
+
+    .head-head{
+       display: none;
+    }
+
+    .menu{
+        font-size: 14px;
+        display: block;
+        list-style-type: none;
+        column-count: 2;
+    }
+
+    .nav-item{
+
+    }
+
+    .head{
+
+    }
 }
 
 
@@ -105,4 +124,11 @@ ul li{
     border-top-right-radius:7px ;
     align-items: center;
     padding: 7px;
+}
+
+.menu{
+   display: block;
+    list-style-type: none;
+    column-count: 4;
+
 }

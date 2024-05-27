@@ -1,4 +1,4 @@
-<ul style="display: flex; list-style-type: none">
+<ul class="menu" >
     <li class="nav-item">
         <a class="nav-link text-white" href="{{route('main')}}">Главная</a>
     </li>
@@ -23,6 +23,4 @@
     <li class="nav-item">
         <a class="nav-link text-white" href="{{route('bank-details')}}">Реквизиты</a>
     </li>
-
-
 </ul>

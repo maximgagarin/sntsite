@@ -35,8 +35,8 @@
     </div>
 
     <div class="row justify-content-between head  mt-1"  >
-                <div class="col-2 ">
-                    <h2 class="logo-h2"><span style="color: #29B638">СНТ</span> "ЗАРЯ-2"</h2>
+                <div class="col-2 mt-2">
+                    <h2 class="logo-h2"><span style="color: #29B638; font-weight: bold">СНТ</span> "ЗАРЯ-2"</h2>
                 </div>
                 <div class="col-10">
                    <x-menu />
@@ -47,10 +47,11 @@
             @yield('content')
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="footer">
+    <div class="row">
+        <div class="footer">
+        </div>
     </div>
 </div>
+
 </body>
 </html>

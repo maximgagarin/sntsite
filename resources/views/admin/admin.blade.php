@@ -26,27 +26,32 @@
     </div>
 @endif
 <div class="container">
-    <div class="row justify-content-between head  " style="background-color: lightgray">
-        <div class="col-lg-4 col-8 mt-2">
-            <div class="row">
-                <div class="col-4">
-                    <img src="{{ asset('images/logo5.jpg') }}" alt="">
-                </div>
-                <div class="col-8">
-                    <h2 class="logo-h2"><span class="text-danger">СНТ</span> "ЗАРЯ-2"</h2>
-                    <p class="logo-p" style=" margin-top: 0; font-size: 12px; ">садоводческое некоммерческое
-                        товарищество</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-3 col-4">
-            <span class="span-logo mt-2">тел. 79-40-68</span>
-            <span class="span-logo  text-success">e-mail: kbgtwr39@yandex.ru</span>
+    <div class="row">
+        <div class="head-head">
+            <ul class="nav__ul" style="font-size: 14px">
+                <li>садоводческое некоммерческое товарищество "Заря-2"</li>
+                <li>тел. 79-40-68</li>
+                <li>e-mail: kbgtwr39@yandex.ru</li>
+                <li>Офис: Боевый пр. 39 пн-пт</li>
+                <li>
+                    <a  style="color: black" href="{{route('registr')}}">Вход</a>
+                </li>
+                @auth
+                    <li >
+                        <a style="color: black" href="{{route('admin')}}">Админ</a>
+                    </li>
+                @endauth
+            </ul>
         </div>
     </div>
 
-    <div class="row">
-        <x-navbar />
+    <div class="row justify-content-between head  mt-1"  >
+        <div class="col-2 mt-2">
+            <h2 class="logo-h2"><span style="color: #29B638; font-weight: bold">СНТ</span> "ЗАРЯ-2"</h2>
+        </div>
+        <div class="col-10">
+            <x-menu />
+        </div>
     </div>
 
 
